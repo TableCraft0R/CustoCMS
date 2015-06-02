@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd">
+<html>
+<head>
+<meta name="theme-color" content="#009ec3">
+<title>Content Additor</title><meta name="theme-color" content="white">
+<script>
+ 
+function getQueryVariable(variable) {
+    var query = window.location.search.substring(1);
+    var vars = query.split('&');
+    for (var i = 0; i < vars.length; i++) {
+        var pair = vars[i].split('=');
+        if (decodeURIComponent(pair[0]) == variable) {
+            return decodeURIComponent(pair[1]);
+        }
+    }
+    console.log('Query variable %s not found', variable);
+}
+//Im a git.
+function factal()
+{
+var art_id = getQueryVariable("ART_ID");//lets undefine it
+document.getElementById("aid").value=art_id;
+}
+ 
+</script>
+<style>
+*{margin:0px;color:white;
+radius:15px;
+}
+body{background:#009ec3;}
+.ubonto{
+padding:1em;
+-webkit-box-shadow: 0px 5px 21px -4px rgba(0,0,0,1);
+-moz-box-shadow: 0px 5px 21px -4px rgba(0,0,0,1);
+box-shadow: 0px 5px 21px -4px rgba(0,0,0,1);
+background: #00b7ea; /* Old browsers */
+background: -moz-linear-gradient(top,  #00b7ea 0%, #009ec3 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#00b7ea), color-stop(100%,#009ec3)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #00b7ea 0%,#009ec3 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #00b7ea 0%,#009ec3 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #00b7ea 0%,#009ec3 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #00b7ea 0%,#009ec3 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00b7ea', endColorstr='#009ec3',GradientType=0 ); /* IE6-9 */
+}
+input, textarea
+{
+-webkit-box-shadow: 0px 2px 14px -1px rgba(0,0,0,1);
+-moz-box-shadow: 0px 2px 14px -1px rgba(0,0,0,1);
+box-shadow: 0px 2px 14px -1px rgba(0,0,0,1);
+padding:1em;
+margin:1em;
+border:none;
+background: #cedce7; /* Old browsers */
+background: -moz-linear-gradient(top,  #cedce7 0%, #596a72 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#cedce7), color-stop(100%,#596a72)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #cedce7 0%,#596a72 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #cedce7 0%,#596a72 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #cedce7 0%,#596a72 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #cedce7 0%,#596a72 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cedce7', endColorstr='#596a72',GradientType=0 ); /* IE6-9 */
+
+}
+p
+{
+-webkit-box-shadow: 0px 2px 14px -1px rgba(0,0,0,1);
+-moz-box-shadow: 0px 2px 14px -1px rgba(0,0,0,1);
+box-shadow: 0px 2px 14px -1px rgba(0,0,0,1);
+
+background: #cedce7; /* Old browsers */
+background: -moz-linear-gradient(top,  #cedce7 0%, #596a72 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#cedce7), color-stop(100%,#596a72)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #cedce7 0%,#596a72 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #cedce7 0%,#596a72 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #cedce7 0%,#596a72 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #cedce7 0%,#596a72 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cedce7', endColorstr='#596a72',GradientType=0 ); /* IE6-9 */
+
+}
+input:active, textarea:active
+{
+background: #596a72; /* Old browsers */
+background: -moz-linear-gradient(top,  #596a72 0%, #cedce7 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#596a72), color-stop(100%,#cedce7)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #596a72 0%,#cedce7 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #596a72 0%,#cedce7 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #596a72 0%,#cedce7 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #596a72 0%,#cedce7 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#596a72', endColorstr='#cedce7',GradientType=0 ); /* IE6-9 */
+
+
+}
+</style>
+</head> <!--oneliner dickers-->
+<body onLoad="factal()">
+<div class="ubonto"><center>Post New Content</center></div>
+<form action="upstream_comment.php" method="post">
+Name: <input type="text" name="UID"><br>
+Article ID (REMAIN UNCHANGED): <input id="aid" type="text" name="ARTID"><br>
+content: <textarea  name="CONT"></textarea><br>
+
+<input type="submit">
+</form>
+<br><br>
+ 
+<br><br><br><br><br><br><br><br><!--Yeah, ugly as fuck-->
+ 
+
+</body>
+</html>
